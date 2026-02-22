@@ -5,8 +5,10 @@ const app = document.querySelector('#app')
 app.innerHTML = `<div id="viewer" class="viewer"></div>`
 
 // Change this if you want to target a different OME-Zarr endpoint.
-const OME_ZARR_URL = 'http://localhost:8080/zarr/'
+const OME_ZARR_URL = 'http://localhost:8080/giga/'
 
+// initVivDeck now returns { deck, setLabels }.
+// setLabels([{ position: [x, y], text: '...' }]) can be called any time to update labels.
 initVivDeck(document.getElementById('viewer'), OME_ZARR_URL)
   .catch((err) => {
     console.error('Failed to initialize Viv viewer:', err)
