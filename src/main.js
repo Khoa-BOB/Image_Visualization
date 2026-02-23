@@ -14,7 +14,7 @@ app.innerHTML = `
 `
 
 // Change this if you want to target a different OME-Zarr endpoint.
-const OME_ZARR_URL = 'http://localhost:8080/giga/'
+const OME_ZARR_URL = 'http://localhost:8080/zarr/'
 
 initVivDeck(document.getElementById('viewer'), OME_ZARR_URL)
   .then(({ enableDrawing, disableDrawing, clearLines }) => {
